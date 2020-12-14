@@ -11,13 +11,13 @@ import Main from "./Main";
 function App() {
   const mostrarBarcos = muelle.barcos.map(function (barco) {
     return (
-      <>
+      <div key={barco.nombre}>
         <Main
           nombre={barco.nombre}
           eslora={barco.eslora}
           tripulantes={barco.tripulantes}
         />
-      </>
+      </div>
     );
   });
   return (
